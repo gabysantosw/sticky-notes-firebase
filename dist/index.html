@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/styles.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker|Shadows+Into+Light&display=swap" rel="stylesheet">
+  <title>Stick w/me</title>
+</head>
+<body class="body">
+
+  <section id="access-section" class="access">
+    <div id="access-input" class="access__output">
+
+    </div>
+
+    <div class="access__controls">
+      <button id="access-button-1" class="access__button">1</button>
+      <button id="access-button-2" class="access__button">2</button>
+      <button id="access-button-3" class="access__button">3</button>
+      <button id="access-button-4" class="access__button">4</button>
+      <button id="access-button-5" class="access__button">5</button>
+      <button id="access-button-6" class="access__button">6</button>
+      <button id="access-button-7" class="access__button">7</button>
+      <button id="access-button-8" class="access__button">8</button>
+      <button id="access-button-9" class="access__button">9</button>
+      <button id="access-button-delete" class="access__button">Del</button>
+      <button id="access-button-0" class="access__button">0</button>
+      <button id="access-button-enter" class="access__button">Enter</button>
+    </div>
+  </section>
+
+  <main id="main-section" class="main hidden">
+    <h1 class="h1 t-heading">TITLE</h1>
+    <button id="to-add-section" class="main__button">
+      +
+    </button>
+    
+    <section class="stickies">
+      <div class="sticky red">
+        <h2 class="sticky__title t-title">Title asdf asdffffffff</h2>
+        <p class="sticky__body t-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus enim quas expedita fugit, vitae ipsum, alias impedit, officiis eum possimus inventore vel consequatur id voluptatem porro ducimus. Necessitatibus officia, aut.</p>
+        <span class="sticky__made-by">🐼</span>
+        <h3 class="sticky__footer t-footer">12/12/12</h3>
+      </div>
+  
+      <div class="sticky yellow">
+        <h2 class="sticky__title t-title">Title asdf asdffffffff</h2>
+        <p class="sticky__body t-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus enim quas expedita fugit, vitae ipsum, alias impedit, officiis eum possimus inventore vel consequatur id voluptatem porro ducimus. Necessitatibus officia, aut.</p>
+        <span class="sticky__made-by">🐼</span>
+        <h3 class="sticky__footer t-footer">12/12/12</h3>
+      </div>
+  
+      <div class="sticky green">
+        <h2 class="sticky__title t-title">Title asdf asdffffffff</h2>
+        <p class="sticky__body t-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus enim quas expedita fugit, vitae ipsum, alias impedit, officiis eum possimus inventore vel consequatur id voluptatem porro ducimus. Necessitatibus officia, aut.</p>
+        <span class="sticky__made-by">🌵</span>
+        <h3 class="sticky__footer t-footer">12/12/12</h3>
+      </div>
+  
+      <div class="sticky blue">
+        <h2 class="sticky__title t-title">Title asdf asdffffffff</h2>
+        <p class="sticky__body t-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus enim quas expedita fugit, vitae ipsum, alias impedit, officiis eum possimus inventore vel consequatur id voluptatem porro ducimus. Necessitatibus officia, aut.</p>
+        <span class="sticky__made-by">🐼</span>
+        <h3 class="sticky__footer t-footer">12/12/12</h3>
+      </div>
+  
+      <div class="sticky purple">
+        <h2 class="sticky__title t-title">Title asdf asdffffffff</h2>
+        <p class="sticky__body t-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus enim quas expedita fugit, vitae ipsum, alias impedit, officiis eum possimus inventore vel consequatur id voluptatem porro ducimus. Necessitatibus officia, aut.</p>
+        <span class="sticky__made-by">🐼</span>
+        <h3 class="sticky__footer t-footer">12/12/12</h3>
+      </div>
+    </section>
+
+  </main>
+
+  <section id="add-section" class="add hidden">
+    <button id="to-main-section" class="add__back-button">
+      X
+    </button>
+
+    <form id="add-sticky" class="add-sticky yellow">
+      <textarea id="form-title" type="text" name="title" class="add-sticky__title t-title" required></textarea>
+      <textarea id="form-text" type="text" name="text" class="add-sticky__text t-body" required></textarea>
+      <textarea id="form-footer" type="text" name="footer" class="add-sticky__footer t-footer" required></textarea>
+      <div id="color-section" class="add-sticky__color-section">
+        <input type="radio" name="color" id="yellow" class="add-sticky__radio" value="yellow" checked>
+        <label for="yellow" class="add-sticky__label add-sticky__label-yellow" data-color="yellow">✓</label>
+
+        <input type="radio" name="color" id="green" class="add-sticky__radio" value="green">
+        <label for="green" class="add-sticky__label add-sticky__label-green" data-color="green">✓</label>
+
+        <input type="radio" name="color" id="red" class="add-sticky__radio" value="red">
+        <label for="red" class="add-sticky__label add-sticky__label-red" data-color="red">✓</label>
+
+        <input type="radio" name="color" id="blue" class="add-sticky__radio" value="blue">
+        <label for="blue" class="add-sticky__label add-sticky__label-blue" data-color="blue">✓</label>
+
+        <input type="radio" name="color" id="purple" value="purple" class="add-sticky__radio">
+        <label for="purple" class="add-sticky__label add-sticky__label-purple" data-color="purple">✓</label>
+      </div>
+      <span class="sticky__made-by">🌵</span>
+      <button type="submit" class="add-sticky__button">Add</button>
+    </form>
+  </section>
+
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-app.js"></script>
+  <!-- Firebase's SKDs -->
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.1.1/firebase-firestore.js"></script>
+  <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+      
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    // References
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+  </script>
+  <script src="scripts/app.js"></script>
+</body>
+</html>

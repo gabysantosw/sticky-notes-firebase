@@ -1,0 +1,115 @@
+// INCLUDES
+// @import url('https://fonts.googleapis.com/css?family=Permanent+Marker|Shadows+Into+Light&display=swap');
+@import 'setup';
+@import 'access';
+@import 'add';
+
+// BASICS
+.body {
+  
+  background-color: $dark;
+}
+
+.h1 {
+  margin-bottom: $x2;
+  color: $light;
+  transform: rotateZ(-2deg);
+  text-align: center;
+}
+
+.main {
+  padding: $x3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__button {
+    padding: $x1 $x2;
+    border: none;
+    border-radius: 0 $x1 0 0;
+    background-color: $l-dark;
+    box-shadow: 0 0 1rem $d-dark;
+    color: $light;
+    font-size: 2rem;
+    font-weight: 900;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $dark;
+      color: $light;
+    }
+  }
+}
+
+.stickies {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.sticky {
+  width: 400px;
+  max-width: 100%;
+  min-height: 370px;
+  box-sizing: border-box;
+  margin-bottom: $x4;
+  padding: $x2 $x3;
+  background-image: linear-gradient($lighter 50px, transparent 60px);
+  position: relative;
+  display: flex; 
+  flex-direction: column;
+  &::after {
+    content: "";
+    width: 30px;
+    height: 30px;
+    background-image: linear-gradient(135deg, $darker 50%, transparent 50%);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  &::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background-image: linear-gradient(135deg, transparent 50%, $dark 50%);
+    position: absolute;
+    bottom: -5px;
+    right: -5px;
+  }
+}
+.sticky:nth-child(even) {
+  transform: rotateZ(-2deg);
+}
+.sticky:nth-child(odd) {
+  transform: rotateZ(1deg);
+}
+
+.sticky__title {
+  text-align: center;
+  line-height: 1em;
+}
+
+.sticky__body {
+  margin: $x2 0;
+  letter-spacing: .1rem;
+  line-height: 1.2em;
+  flex-grow: 1;
+}
+
+.sticky__footer {
+  padding-right: 30px;
+  text-align: right;
+  line-height: 1em;
+}
+
+.sticky__made-by {
+  font-size: 2.5rem;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+}

@@ -1,0 +1,167 @@
+// ADD STICKY 
+.add {
+  width: 100%;
+  height: 100%;
+  padding: $x2;
+  box-sizing: border-box;
+  background-color: $dark;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  // bc main__button is 1
+  z-index: 2;
+
+  &__back-button {
+    padding: $x1 $x2;
+    border: none;
+    border-radius: 0 0 $x1 0;
+    background-color: $l-dark;
+    box-shadow: 0 0 1rem $d-dark;
+    color: $light;
+    font-size: 2rem;
+    font-weight: 900;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $dark;
+      color: $light;
+    }
+  }
+
+  &-sticky {
+    width: 400px;
+    max-width: 100%;
+    min-height: 100%;
+    box-sizing: border-box;
+    margin-bottom: $x4;
+    padding: $x2 $x3;
+    background-image: linear-gradient($lighter 50px, transparent 60px);
+    position: relative;
+    display: flex; 
+    flex-direction: column;
+
+    &::after {
+      content: "";
+      width: 30px;
+      height: 30px;
+      background-image: linear-gradient(135deg, $darker 50%, transparent 50%);
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+    &::before {
+      content: "";
+      width: 40px;
+      height: 40px;
+      background-image: linear-gradient(135deg, transparent 50%, $dark 50%);
+      position: absolute;
+      bottom: -5px;
+      right: -5px;
+    } 
+  }
+}
+
+.add-sticky {
+  display: flex; 
+  flex-direction: column;
+  align-items: center;
+
+  &__title, &__text, &__footer {
+    width: 100%;
+    background-color: transparent;
+    border: 2px dashed $darker;
+    margin-bottom: $x1;
+    word-wrap: break-word;
+    word-break: break-all;
+    resize: none;
+  }
+
+  &__title {
+    height: 65px;
+    line-height: 1;
+    text-align: center;
+  }
+  &__text {
+    flex-grow: 2;
+    line-height: 1.4;
+  }
+  &__footer {
+    height: 45px;
+    line-height: 1;
+    text-align: right;
+  }
+  &__button {
+    padding: $x1 30%;
+    border: none;
+    border-radius: 10rem;
+    background-color: $d-dark;
+    color: $light;
+    font-size: 1.8rem;
+    font-family: $f-marker;
+
+    &:hover {
+      cursor: pointer;
+      background-color: $darker;
+      color: $d-dark;
+    }
+  }
+}
+
+.add-sticky {
+  &__color-section {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: $x1;
+  }
+  &__radio {
+    display: none;
+  }
+  &__label {
+    padding: $x1 $x2;
+    border-radius: 10rem;
+    color: $dark;
+    font-size: 1.8rem;
+    font-family: $f-marker;
+    user-select: none;
+
+    &:hover {
+      cursor: pointer;
+      color: $darker;
+    }
+    
+    &-yellow {
+      background-color: $yellow;
+      color: transparent;
+    }
+    &-green {
+      background-color: $green;
+      color: transparent;
+    }
+    &-red {
+      background-color: $red;
+      color: transparent;
+    }
+    &-blue {
+      background-color: $blue;
+      color: transparent;
+    }
+    &-purple {
+      background-color: $purple;
+      color: transparent;
+    }
+  }
+  &__radio:checked + &__label {
+    color: $dark;
+  }
+}
+
+.form-error {
+  border: 2px dashed $red;
+}
