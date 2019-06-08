@@ -1,5 +1,7 @@
 # Sticky Notes with Firebase 
 
+[Live](https://gabysantosw.github.io/sticky-notes-firebase/index.html)
+
 ## TODO 
 
 - [ ] css grid for the notes 
